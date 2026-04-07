@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Телеканал Новый — 634. Андеграунд телевидение. Самый честный телеканал интернета.">
+
+<!-- OG Tags -->
+<meta property="og:title" content="Телеканал Новый — Канал 634">
+<meta property="og:description" content="Самый честный телеканал интернета. Передачи, мерч, абсурд.">
+<meta property="og:image" content="https://telekanal-novii.github.io/main/img/bg.jpg">
+<meta property="og:url" content="https://telekanal-novii.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Телеканал Новый">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Телеканал Новый — Канал 634">
+<meta name="twitter:description" content="Самый честный телеканал интернета.">
+
+<title>Телеканал Новый</title>
+<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📺</text></svg>">
+</head>
+<body>
+
+<!-- Шум -->
+<div id="noise"></div>
+
+<!-- Навигация -->
+<nav id="nav">
+  <a href="#home" class="logo">НОВЫЙ</a>
+  <div class="links" id="navLinks">
+    <a href="#home">главная</a>
+    <a href="#shows">передачи</a>
+    <a href="#store">магазин</a>
+    <a href="#team">лица</a>
+  </div>
+  <button id="burger" aria-label="меню" style="display:none">☰</button>
+</nav>
+
+<style>
+@media(max-width:768px){
+  #burger{display:flex!important;align-items:center;justify-content:center}
+  #navLinks{
+    position:fixed!important;
+    top:0!important;left:0!important;
+    width:80%!important;max-width:300px!important;height:100vh!important;
+    background:rgba(10,10,10,.98)!important;
+    flex-direction:column!important;
+    padding:5rem 1.5rem 2rem!important;gap:1.5rem!important;
+    transform:translateX(-100%)!important;
+    transition:transform .3s ease!important;z-index:99!important;
+    border-right:2px dashed var(--neon3)!important
+  }
+  #navLinks.open{transform:translateX(0)!important}
+  #navLinks a{
+    display:block!important;font-size:1rem!important;
+    padding:.5rem 0!important;color:#e0e0e0!important;
+    border-bottom:1px dashed rgba(255,255,255,.05)!important;
+    text-decoration:none!important
+  }
+  #navLinks a:hover{color:#ff0!important}
+}
+</style>
+
+<!-- Контент -->
+<main id="app"></main>
+
+<!-- Кнопка шума -->
+<button id="toggle-noise" aria-label="Переключить шум">⊘</button>
+
+<!-- Scroll to top -->
+<button id="scrollTop" aria-label="Наверх" style="display:none">↑</button>
+
+<script src="js/data.js?v=2"></script>
+<script src="js/app.js?v=2"></script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(102592978,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+</script>
+
+</body>
+</html>

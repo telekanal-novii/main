@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 — Не найдено | Телеканал Новый</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#0a0a0a;color:#e0e0e0;
+  font-family:"Comic Sans MS","Chalkboard SE",cursive,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  overflow:hidden;text-align:center;padding:2rem
+}
+h1{
+  font-size:clamp(5rem,20vw,12rem);
+  font-weight:900;
+  background:linear-gradient(45deg,#ff0,#f0f,#0ff,#0f0);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:rainbow 3s ease infinite,bounce 1s ease infinite alternate;
+  filter:drop-shadow(0 0 20px rgba(255,0,255,.4));
+  line-height:1
+}
+@keyframes rainbow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes bounce{
+  from{transform:translateY(0) rotate(-1deg)}
+  to{transform:translateY(-8px) rotate(1deg)}
+}
+p{
+  font-size:clamp(1rem,3vw,1.5rem);
+  color:#555;margin:1rem 0 2rem;
+  animation:wiggle 3s ease infinite
+}
+@keyframes wiggle{
+  0%,100%{transform:rotate(-1deg)}
+  50%{transform:rotate(1deg)}
+}
+a{
+  display:inline-block;
+  padding:.8rem 2rem;
+  background:linear-gradient(135deg,#f0f,#0ff);
+  color:#000;font-weight:700;
+  border-radius:20px;text-decoration:none;
+  font-size:1.1rem;
+  transition:transform .2s,box-shadow .2s
+}
+a:hover{
+  transform:scale(1.1) rotate(-3deg);
+  box-shadow:0 0 30px rgba(255,0,255,.5)
+}
+.emoji{
+  font-size:4rem;margin-bottom:1rem;
+  animation:spin 4s linear infinite
+}
+@keyframes spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}
+#noise{
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.015) 2px,rgba(255,255,255,.015) 4px);
+  mix-blend-mode:overlay
+}
+</style>
+</head>
+<body>
+<div id="noise"></div>
+<div class="emoji">📺</div>
+<h1>404</h1>
+<p>Такой страницы нет. Возможно, её унёс Виктор Курча в обмен на деталь от унитаза.</p>
+<a href="index.html#home">← На главную</a>
+</body>
+</html>
